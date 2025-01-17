@@ -34,7 +34,7 @@ G: 2
 // TC-6
 // Tests Requirements R3, R8
 // Find students on bus 56
-// Expected output: VILARDO, EMMANUEL, Grade: 2, Classroom: 104; BUSSMANN, BILLY, Grade: 2, Classroom: 108
+// Expected output: RACANELLO, NOEL, Grade: 6, Classroom: 102; VILARDO, EMMANUEL, Grade: 2, Classroom: 104;...
 B: 56
 
 // TC-7
@@ -64,5 +64,5 @@ I
 // TC-11
 // Tests Requirements R3, R13
 // Quit the program
-// Expected output: Exiting program.
+// Expected output: Exiting.
 Q
