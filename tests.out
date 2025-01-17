@@ -1,9 +1,8 @@
-Welcome to SchoolSearch!
-To exit, type 'Q'.
-
+Welcome to the School Search Program.
+Enter command:
 -> WOOLERY, NOLAN, Grade: 2, Classroom: 104, Teacher: STEIB, GALE
 -> WOOLERY, NOLAN, Bus: 51
--> No students found with last name: NEMO
+-> No students found with last name: NINA
 -> LIBRANDI, TODD
 HAVIR, BOBBIE
 SARAO, DIEDRA

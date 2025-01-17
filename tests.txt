@@ -16,8 +16,8 @@ S: WOOLERY B
 // TC-3
 // Tests Requirements R3, R4
 // Find information for a non-existing student (NEMO)
-// Expected output: No students found with last name: NEMO
-S: NEMO
+// Expected output: No students found with last name: NINA
+S: NINA
 
 // TC-4
 // Tests Requirements R3, R6
@@ -28,7 +28,7 @@ T: HAMER
 // TC-5
 // Tests Requirements R3, R7
 // Find students in grade 2
-// Expected output: WOOLERY, NOLAN; LIBRANDI, TODD; HAVIR, BOBBIE; ...
+// Expected output: WOOLERY, NOLAN; VILARDO, EMMANUEL; LIBRANDI, TODD; ...
 G: 2
 
 // TC-6
