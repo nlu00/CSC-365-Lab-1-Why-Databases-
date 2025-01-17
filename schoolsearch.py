@@ -1,23 +1,10 @@
-class Parser:
-    """Parser class to handle user input dynamically."""
-    def atEOF(self):
-        """Check if the program should terminate."""
-        return False
-
-    def parse(self):
-        """Get the next command from the user."""
-        return input().strip()
-
-
 class SchoolSearch:
-    def __init__(self, header, prompt, parser, filename):
+    def __init__(self, header, prompt, filename):
         self.header = header
         self.prompt = prompt
-        self.parser = parser
         self.data = self.load_students(filename)
 
     def load_students(self, filename):
-        """Load and parse students.txt into a list of dictionaries."""
         try:
             students = []
             with open(filename, 'r') as file:
@@ -43,16 +30,16 @@ class SchoolSearch:
 
     def search(self):
         """Main search method."""
-        self.printHeader()
+        self.print_header()
         while True:
-            self.printPrompt()
-            command = self.parser.parse()
+            self.print_prompt()
+            command = input().strip()
             try:
-                self.processCommand(command)
+                self.process_command(command)
             except Exception as e:
                 print(f"Error: {e}")
 
-    def processCommand(self, command):
+    def process_command(self, command):
         """Process a single command."""
         parts = command.strip().split()
         if not parts:
@@ -61,24 +48,24 @@ class SchoolSearch:
         params = parts[1:]
 
         if cmd == "S":
-            self.handleStudent(params)
+            self.handle_student(params)
         elif cmd == "T":
-            self.handleTeacher(params)
+            self.handle_teacher(params)
         elif cmd == "G":
-            self.handleGrade(params)
+            self.handle_grade(params)
         elif cmd == "B":
-            self.handleBus(params)
+            self.handle_bus(params)
         elif cmd == "A":
-            self.handleAverage(params)
+            self.handle_average(params)
         elif cmd == "I":
-            self.handleInfo()
+            self.handle_info()
         elif cmd == "Q":
             print("Exiting program.")
             exit(0)
         else:
             raise ValueError("Invalid command.")
 
-    def handleStudent(self, params):
+    def handle_student(self, params):
         """Handle S command."""
         if not params:
             raise ValueError("Missing student last name.")
@@ -96,7 +83,7 @@ class SchoolSearch:
                     print(f"{student['StLastName']}, {student['StFirstName']}, Grade: {student['Grade']}, "
                           f"Classroom: {student['Classroom']}, Teacher: {student['TLastName']}, {student['TFirstName']}")
 
-    def handleTeacher(self, params):
+    def handle_teacher(self, params):
         """Handle T command."""
         if not params:
             raise ValueError("Missing teacher last name.")
@@ -108,7 +95,7 @@ class SchoolSearch:
             for student in matches:
                 print(f"{student['StLastName']}, {student['StFirstName']}")
 
-    def handleGrade(self, params):
+    def handle_grade(self, params):
         """Handle G command."""
         if not params:
             raise ValueError("Missing grade number.")
@@ -132,7 +119,7 @@ class SchoolSearch:
         except ValueError:
             print("Error: Invalid grade number.")
 
-    def handleBus(self, params):
+    def handle_bus(self, params):
         """Handle B command."""
         if not params:
             raise ValueError("Missing bus route number.")
@@ -147,7 +134,7 @@ class SchoolSearch:
         except ValueError:
             print("Error: Invalid bus route number.")
 
-    def handleAverage(self, params):
+    def handle_average(self, params):
         """Handle A command."""
         if not params:
             raise ValueError("Missing grade number.")
@@ -162,7 +149,7 @@ class SchoolSearch:
         except ValueError:
             print("Error: Invalid grade number.")
 
-    def handleInfo(self):
+    def handle_info(self):
         """Handle I command."""
         counts = {}
         for student in self.data:
@@ -170,22 +157,20 @@ class SchoolSearch:
         for grade, count in sorted(counts.items()):
             print(f"Grade {grade}: {count} Students")
 
-    def printHeader(self):
+    def print_header(self):
         """Print the header."""
         print(self.header)
 
-    def printPrompt(self):
+    def print_prompt(self):
         """Print the prompt."""
         print(self.prompt, end='')
 
 
 if __name__ == "__main__":
     # Initialize and run the SchoolSearch program
-    parser = Parser()
     school_search = SchoolSearch(
         header="Welcome to SchoolSearch!\nTo exit, type 'Q'.",
         prompt="-> ",
-        parser=parser,
         filename="students.txt"
     )
     school_search.search()

@@ -1,0 +1,41 @@
+Welcome to SchoolSearch!
+To exit, type 'Q'.
+
+-> WOOLERY, NOLAN, Grade: 2, Classroom: 104, Teacher: STEIB, GALE
+-> WOOLERY, NOLAN, Bus: 51
+-> No students found with last name: NEMO
+-> LIBRANDI, TODD
+HAVIR, BOBBIE
+SARAO, DIEDRA
+MULLINGS, LEIGHANN
+VANCOTT, MIKE
+WICINSKY, TERESE
+KOZOLA, BUSTER
+BUSSMANN, BILLY
+BERBES, DICK
+MULGREW, RANDELL
+TOWLEY, LANE
+-> WOOLERY, NOLAN
+LIBRANDI, TODD
+HAVIR, BOBBIE
+SARAO, DIEDRA
+MULLINGS, LEIGHANN
+VANCOTT, MIKE
+WICINSKY, TERESE
+KOZOLA, BUSTER
+BUSSMANN, BILLY
+BERBES, DICK
+MULGREW, RANDELL
+TOWLEY, LANE
+-> VILARDO, EMMANUEL, Grade: 2, Classroom: 104
+BUSSMANN, BILLY, Grade: 2, Classroom: 108
+-> WICINSKY, TERESE, GPA: 3.22, Bus: 53, Teacher: HAMER, GAVIN
+-> KOZOLA, BUSTER, GPA: 2.76, Bus: 55, Teacher: HAMER, GAVIN
+-> Grade 4 Average GPA: 3.01
+-> Grade 1: 2 Students
+Grade 2: 12 Students
+Grade 3: 9 Students
+Grade 4: 11 Students
+Grade 5: 0 Students
+Grade 6: 15 Students
+-> Exiting program.

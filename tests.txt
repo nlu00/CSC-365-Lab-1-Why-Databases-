@@ -1,0 +1,68 @@
+// CSC 365
+// Lab 1-a test suite
+
+// TC-1
+// Tests Requirements R3, R4
+// Find information for an existing student (WOOLERY, NOLAN)
+// Expected output: WOOLERY, NOLAN, Grade: 2, Classroom: 104, Teacher: STEIB, GALE
+S: WOOLERY
+
+// TC-2
+// Tests Requirements R3, R5
+// Find bus information for an existing student (WOOLERY, NOLAN)
+// Expected output: WOOLERY, NOLAN, Bus: 51
+S: WOOLERY B
+
+// TC-3
+// Tests Requirements R3, R4
+// Find information for a non-existing student (NEMO)
+// Expected output: No students found with last name: NEMO
+S: NEMO
+
+// TC-4
+// Tests Requirements R3, R6
+// Find students for a specific teacher (HAMER, GAVIN)
+// Expected output: LIBRANDI, TODD; HAVIR, BOBBIE; SARAO, DIEDRA; ...
+T: HAMER
+
+// TC-5
+// Tests Requirements R3, R7
+// Find students in grade 2
+// Expected output: WOOLERY, NOLAN; LIBRANDI, TODD; HAVIR, BOBBIE; ...
+G: 2
+
+// TC-6
+// Tests Requirements R3, R8
+// Find students on bus 56
+// Expected output: VILARDO, EMMANUEL, Grade: 2, Classroom: 104; BUSSMANN, BILLY, Grade: 2, Classroom: 108
+B: 56
+
+// TC-7
+// Tests Requirements R3, R9
+// Find the student with the highest GPA in grade 2
+// Expected output: WICINSKY, TERESE, GPA: 3.22, Bus: 53, Teacher: HAMER, GAVIN
+G: 2 H
+
+// TC-8
+// Tests Requirements R3, R9
+// Find the student with the lowest GPA in grade 2
+// Expected output: KOZOLA, BUSTER, GPA: 2.76, Bus: 55, Teacher: HAMER, GAVIN
+G: 2 L
+
+// TC-9
+// Tests Requirements R3, R10
+// Calculate average GPA for grade 4
+// Expected output: Grade 4 Average GPA: <calculated GPA>
+A: 4
+
+// TC-10
+// Tests Requirements R3, R11
+// Print number of students per grade
+// Expected output: Grade 1: 2 Students; Grade 2: <count>; Grade 3: <count>; ...
+I
+
+// TC-11
+// Tests Requirements R3, R13
+// Quit the program
+// Expected output: Exiting program.
+Q
